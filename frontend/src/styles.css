@@ -1,0 +1,63 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0b1220;
+  --color-ink-800: #121b2e;
+  --color-accent: #1e293b;
+  --color-gold: #c89b3c;
+  --color-gold-dark: #9c7424;
+  --color-gold-light: #e7cd8b;
+  --color-surface: #f5f6f8;
+  --color-white: #ffffff;
+  --color-danger: #b3261e;
+  --color-danger-bg: #fdecea;
+  --color-success: #1e6f50;
+  --color-success-bg: #e8f5ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface);
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-gold-light);
+  color: var(--color-ink);
+}
+
+/* Ledger-style hairline texture used behind the hero/stepper */
+.ledger-bg {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(200, 155, 60, 0.06),
+    rgba(200, 155, 60, 0.06) 1px,
+    transparent 1px,
+    transparent 40px
+  );
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
